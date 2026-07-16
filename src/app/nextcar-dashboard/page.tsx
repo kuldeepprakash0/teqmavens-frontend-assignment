@@ -146,14 +146,14 @@ export default function NextCarDashboard() {
 
                 <div className="lg:pr-[50px] mb-5">
                   <h2 className=" font-bold text-[18px] lg:text-[24px] leading-[30px] whitespace-nowrap">620</h2>
-                  <p className="text-[12px] lg:text-[24px] text-black dark:text-white/70 whitespace-nowrap">
+                  <p className="text-[12px] lg:text-[14px] text-black dark:text-white/70 whitespace-nowrap">
                     Horse Power
                   </p>
                 </div>
 
                 <div className="lg:pr-[20px]">
                   <h2 className=" font-bold text-[18px] lg:text-[24px] leading-[30px] whitespace-nowrap">780</h2>
-                  <p className="text-[12px] lg:text-[24px] text-black dark:text-white/70 whitespace-nowrap">
+                  <p className="text-[12px] lg:text-[14px] text-black dark:text-white/70 whitespace-nowrap">
                     Torque
                   </p>
                 </div>
@@ -163,21 +163,21 @@ export default function NextCarDashboard() {
               <div className="text-left">
                 <div className="lg:pl-[20px] mb-5">
                   <h2 className="font-bold text-[18px] lg:text-[24px] leading-[30px] whitespace-nowrap">3.2 Sec</h2>
-                  <p className="text-[12px] lg:text-[24px] text-black dark:text-white/70 whitespace-nowrap">
+                  <p className="text-[12px] lg:text-[14px] text-black dark:text-white/70 whitespace-nowrap">
                     0-100 KM/H
                   </p>
                 </div>
 
                 <div className="lg:pl-[50px] mb-5">
                   <h2 className=" font-bold text-[18px] lg:text-[24px] leading-[30px] whitespace-nowrap">2,450 KM</h2>
-                  <p className="text-[12px] lg:text-[24px] text-black dark:text-white/70 whitespace-nowrap">
+                  <p className="text-[12px] lg:text-[14px] text-black dark:text-white/70 whitespace-nowrap">
                     Oil Change
                   </p>
                 </div>
 
                 <div className="lg:pl-[20px]">
                   <h2 className=" font-bold text-[18px] lg:text-[24px] leading-[30px] whitespace-nowrap">520 KM</h2>
-                  <p className="text-[12px] lg:text-[24px] text-black dark:text-white/70 whitespace-nowrap">
+                  <p className="text-[12px] lg:text-[14px] text-black dark:text-white/70 whitespace-nowrap">
                     Range
                   </p>
                 </div>
