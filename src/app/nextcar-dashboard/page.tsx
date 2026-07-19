@@ -22,13 +22,19 @@ export default function NextCarDashboard() {
         </Link>
         <ThemeToggle />
       </header>
-      <section className="hero-rings-bg bg-white dark:bg-black h-[740px]">
+      <section className="relative bg-white dark:bg-black h-[968px]">
+        <div className="rings absolute left-1/2 top-1/2 h-[1403px] w-[1800px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-zinc-800" />
+
+        <div className="rings absolute left-1/2 top-1/2 h-[1153px] w-[1348px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-zinc-800" />
+
+        <div className="rings absolute left-1/2 top-1/2 h-[821px] w-[823px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-zinc-800" />
+
         <Image
           src={dot}
           alt="White Dot"
           className="absolute z-[-1] w-[560px] left-[50%] translate-x-[-50%] top-[48px]"
         />
-        <Image src={car} alt="Car" className="w-[366px] h-auto mx-auto" />
+        <Image src={car} alt="Car" className="w-[477px] absolute top-0 left-1/2 -translate-x-1/2" />
 
         <div className="top-btn-nav absolute top-[95px] left-0 flex w-full justify-between px-[27px] z-[99]">
           <Link href="/">
@@ -79,44 +85,32 @@ export default function NextCarDashboard() {
           </div>
         </div>
 
-        <div className="absolute inset-0 w-full">
+        <div className="w-full h-[968px]">
           <div className="grid grid-cols-12 gap-4 h-full">
-            <div className="col-span-12 col-start-1 flex items-center justify-center flex-col lg:gap-[10px] h-[244px]">
-              <h1 className="italic font-shrikhand text-[22px] lg:text-[42px] tracking-[1%] uppercase mt-[132px] lg:mt-10">
+            <div className="col-span-12 col-start-1 flex items-center justify-end flex-col h-[250px]">
+              <h1 className="font-shrikhand text-[22px] lg:text-[42px] xl:text-[60px] tracking-[1%] uppercase mt-[5] leading-[39px] mb-5">
                 Engineered for <span className="text-red-500">passion</span>
               </h1>
               <div className="flex flex-col items-center justify-center">
-                <p className="text-[18px] tracking-[1%] text-black dark:text-white/70">Precision. Power. Performance</p>
+                <p className="leading-[39px] text-[18px] tracking-[1%] text-black dark:text-white/70">Precision. Power. Performance</p>
                 <span className="inline-block w-[26px] h-1 bg-[#BF0405]"></span>
               </div>
 
             </div>
-            <div className="col-span-2 col-start-1 col-end-3">
-              <div className="left-round-btn relative">
-                <div className="flex flex-col gap-2.5 items-end">
+            <div className="col-span-2 col-start-1 col-end-3 flex items-center">
+              <div className="left-round-btn relative w-full">
+                <div className="flex flex-col gap-[20] items-end justify-center py-[15px]">
 
-                  <button className="lg:pr-[20px] mb-5 group relative">
+                  <button className="lg:pr-[28%] group relative tooltip-btn">
                     <Image
                       src="/icons/meter.svg"
                       alt="meter"
                       width={48}
                       height={48}
                     />
-                    <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 
-              opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto
-              scale-95 group-hover:scale-100 transition-all duration-200 ease-out z-50">
-
-                      <div className="relative flex items-center justify-center bg-[#2D2D2D] text-white px-5 py-2 rounded-r-full rounded-l-[10px] text-xs font-semibold tracking-wide whitespace-nowrap
-                border-y border-r border-[#BF0405] shadow-[0_0_12px_rgba(191,4,5,0.25)]">
-
-                        <span className="absolute left-[-5px] top-1/2 -translate-y-1/2 w-2.5 h-3.5 bg-[#2D2D2D] rounded-l-full border-l border-y border-[#2D2D2D]"></span>
-
-                        <span className="relative z-10">Dashboard</span>
-                      </div>
-
-                    </div>
+                    <span>Dashboard</span>
                   </button>
-                  <button className="lg:pr-[50px] mb-5">
+                  <button className="lg:pr-[38%]">
                     <Image
                       src="/icons/home.svg"
                       alt="home"
@@ -124,7 +118,7 @@ export default function NextCarDashboard() {
                       height={48}
                     />
                   </button>
-                  <button className="lg:pr-[20px]">
+                  <button className="lg:pr-[28%]">
                     <Image
                       src="/icons/setting.png"
                       alt="setting"
@@ -136,58 +130,58 @@ export default function NextCarDashboard() {
               </div>
             </div>
             <div className="col-span-2 col-start-4 col-end-6">
-              <div className="text-right">
-                <div className="lg:pr-[20px] mb-5">
-                  <h2 className="font-bold text-[18px] lg:text-[24px] leading-[30px] whitespace-nowrap">352</h2>
-                  <p className="text-[12px] lg:text-[14px] text-black dark:text-white/70 whitespace-nowrap">
+              <div className="text-right h-[342px] flex flex-col justify-evenly">
+                <div className="lg:pr-[40px] mb-5">
+                  <h2 className="font-bold text-[18px] lg:text-[30px] leading-[30px] whitespace-nowrap">352</h2>
+                  <p className="text-[12px] lg:text-[16px] text-black dark:text-white/70 whitespace-nowrap">
                     Top Speed
                   </p>
                 </div>
 
-                <div className="lg:pr-[50px] mb-5">
-                  <h2 className=" font-bold text-[18px] lg:text-[24px] leading-[30px] whitespace-nowrap">620</h2>
-                  <p className="text-[12px] lg:text-[14px] text-black dark:text-white/70 whitespace-nowrap">
+                <div className="lg:pr-[73px] mb-5">
+                  <h2 className=" font-bold text-[18px] lg:text-[30px] leading-[30px] whitespace-nowrap">620</h2>
+                  <p className="text-[12px] lg:text-[16px] text-black dark:text-white/70 whitespace-nowrap">
                     Horse Power
                   </p>
                 </div>
 
-                <div className="lg:pr-[20px]">
-                  <h2 className=" font-bold text-[18px] lg:text-[24px] leading-[30px] whitespace-nowrap">780</h2>
-                  <p className="text-[12px] lg:text-[14px] text-black dark:text-white/70 whitespace-nowrap">
+                <div className="lg:pr-[40px]">
+                  <h2 className=" font-bold text-[18px] lg:text-[30px] leading-[30px] whitespace-nowrap">780</h2>
+                  <p className="text-[12px] lg:text-[16px] text-black dark:text-white/70 whitespace-nowrap">
                     Torque
                   </p>
                 </div>
               </div>
             </div>
             <div className="col-span-2 col-start-8 col-end-10">
-              <div className="text-left">
-                <div className="lg:pl-[20px] mb-5">
-                  <h2 className="font-bold text-[18px] lg:text-[24px] leading-[30px] whitespace-nowrap">3.2 Sec</h2>
-                  <p className="text-[12px] lg:text-[14px] text-black dark:text-white/70 whitespace-nowrap">
+              <div className="text-left h-[342px] flex flex-col justify-evenly">
+                <div className="lg:pl-[40px] mb-5">
+                  <h2 className="font-bold text-[18px] lg:text-[30px] leading-[30px] whitespace-nowrap">3.2 Sec</h2>
+                  <p className="text-[12px] lg:text-[16px] text-black dark:text-white/70 whitespace-nowrap">
                     0-100 KM/H
                   </p>
                 </div>
 
-                <div className="lg:pl-[50px] mb-5">
-                  <h2 className=" font-bold text-[18px] lg:text-[24px] leading-[30px] whitespace-nowrap">2,450 KM</h2>
-                  <p className="text-[12px] lg:text-[14px] text-black dark:text-white/70 whitespace-nowrap">
+                <div className="lg:pl-[73px] mb-5">
+                  <h2 className=" font-bold text-[18px] lg:text-[30px] leading-[30px] whitespace-nowrap">2,450 KM</h2>
+                  <p className="text-[12px] lg:text-[16px] text-black dark:text-white/70 whitespace-nowrap">
                     Oil Change
                   </p>
                 </div>
 
-                <div className="lg:pl-[20px]">
-                  <h2 className=" font-bold text-[18px] lg:text-[24px] leading-[30px] whitespace-nowrap">520 KM</h2>
-                  <p className="text-[12px] lg:text-[14px] text-black dark:text-white/70 whitespace-nowrap">
+                <div className="lg:pl-[40px]">
+                  <h2 className=" font-bold text-[18px] lg:text-[30px] leading-[30px] whitespace-nowrap">520 KM</h2>
+                  <p className="text-[12px] lg:text-[16px] text-black dark:text-white/70 whitespace-nowrap">
                     Range
                   </p>
                 </div>
               </div>
             </div>
-            <div className="col-span-2 col-start-11 col-end-13">
-              <div className="right-round-btn relative">
-                <div className="flex flex-col gap-2.5 items-start">
+            <div className="col-span-2 col-start-11 col-end-13 flex items-center">
+              <div className="right-round-btn relative w-full">
+                <div className="flex flex-col gap-[20px] items-start justify-center py-[15px]">
 
-                  <button className="lg:pl-[20px] mb-5">
+                  <button className="lg:pl-[28%]">
                     <Image
                       src="/icons/chat.svg"
                       alt="chat"
@@ -195,7 +189,7 @@ export default function NextCarDashboard() {
                       height={48}
                     />
                   </button>
-                  <button className="lg:pl-[50px] mb-5">
+                  <button className="lg:pl-[38%]">
                     <Image
                       src="/icons/paper.svg"
                       alt="paper"
@@ -203,7 +197,7 @@ export default function NextCarDashboard() {
                       height={48}
                     />
                   </button>
-                  <button className="lg:pl-[20px]">
+                  <button className="lg:pl-[28%]">
                     <Image
                       src="/icons/tag.svg"
                       alt="tag"
@@ -214,7 +208,7 @@ export default function NextCarDashboard() {
                 </div>
               </div>
             </div>
-            <div className="col-span-12 col-start-1 flex flex-col justify-end pb-5">
+            <div className="col-span-12 col-start-1 flex flex-col justify-end">
               <TelementryTrack />
             </div>
           </div>
