@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/images/logo.png";
 import ThemeToggle from "@/components/common/ThemeToggle";
-import car from "@/assets/images/car.png";
+import carDesktop from "@/assets/images/car.png";
+import carMobile from "@/assets/images/car-mobile.png";
 import dot from "@/assets/images/white-dot.png";
 import TelementryTrack from "@/components/dashboard/TelemetryTrack";
 
@@ -22,7 +23,7 @@ export default function NextCarDashboard() {
         </Link>
         <ThemeToggle />
       </header>
-      <section className="relative bg-white dark:bg-black h-[968px]">
+      <section className="relative h-[1115px] lg:h-[968px] overflow-hidden">
         <div className="rings absolute left-1/2 top-1/2 h-[1403px] w-[1800px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-zinc-800" />
 
         <div className="rings absolute left-1/2 top-1/2 h-[1153px] w-[1348px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-zinc-800" />
@@ -34,7 +35,14 @@ export default function NextCarDashboard() {
           alt="White Dot"
           className="absolute z-[-1] w-[560px] left-[50%] translate-x-[-50%] top-[48px]"
         />
-        <Image src={car} alt="Car" className="w-[477px] absolute top-0 left-1/2 -translate-x-1/2" />
+        <picture>
+          <source media="(min-width: 1024px)" srcSet={carDesktop.src} />
+          <Image
+            src={carMobile}
+            alt="Car"
+            className="absolute left-1/2 -translate-x-1/2  w-[200px] h-[200px] top-[445px] lg:w-[477px] lg:h-auto lg:top-0"
+          />
+        </picture>
 
         <div className="top-btn-nav absolute top-[95px] left-0 flex w-full justify-between px-[27px] z-[99]">
           <Link href="/">
@@ -97,9 +105,9 @@ export default function NextCarDashboard() {
               </div>
 
             </div>
-            <div className="col-span-2 col-start-1 col-end-3 flex items-center">
+            <div className="col-span-12 lg:col-span-2 col-start-1 lg:col-end-3 flex items-center">
               <div className="left-round-btn relative w-full">
-                <div className="flex flex-col gap-[20] items-end justify-center py-[15px]">
+                <div className="flex flex-row lg:flex-col gap-[20] items-end justify-center py-[15px]">
 
                   <button className="lg:pr-[28%] group relative tooltip-btn">
                     <Image
@@ -110,26 +118,28 @@ export default function NextCarDashboard() {
                     />
                     <span>Dashboard</span>
                   </button>
-                  <button className="lg:pr-[38%]">
+                  <button className="lg:pr-[38%] group relative tooltip-btn">
                     <Image
                       src="/icons/home.svg"
                       alt="home"
                       width={48}
                       height={48}
                     />
+                    <span>Home</span>
                   </button>
-                  <button className="lg:pr-[28%]">
+                  <button className="lg:pr-[28%] group relative tooltip-btn">
                     <Image
                       src="/icons/setting.png"
                       alt="setting"
                       width={48}
                       height={48}
                     />
+                    <span>Setting</span>
                   </button>
                 </div>
               </div>
             </div>
-            <div className="col-span-2 col-start-4 col-end-6">
+            <div className="col-span-4 col-start-1 col-end-5 lg:col-span-2 lg:col-start-4  lg:col-end-6 pr-[40px] 2xl:pr-[0]">
               <div className="text-right h-[342px] flex flex-col justify-evenly">
                 <div className="lg:pr-[40px] mb-5">
                   <h2 className="font-bold text-[18px] lg:text-[30px] leading-[30px] whitespace-nowrap">352</h2>
@@ -153,7 +163,7 @@ export default function NextCarDashboard() {
                 </div>
               </div>
             </div>
-            <div className="col-span-2 col-start-8 col-end-10">
+            <div className="col-span-4 col-start-9 col-end-13 lg:col-span-2 lg:col-start-8  lg:col-end-10 pl-[40px] 2xl:pl-[0]">
               <div className="text-left h-[342px] flex flex-col justify-evenly">
                 <div className="lg:pl-[40px] mb-5">
                   <h2 className="font-bold text-[18px] lg:text-[30px] leading-[30px] whitespace-nowrap">3.2 Sec</h2>
@@ -177,9 +187,9 @@ export default function NextCarDashboard() {
                 </div>
               </div>
             </div>
-            <div className="col-span-2 col-start-11 col-end-13 flex items-center">
+            <div className="col-span-12 lg:col-span-2 col-start-1 lg:col-start-11 lg:col-end-13 flex items-center">
               <div className="right-round-btn relative w-full">
-                <div className="flex flex-col gap-[20px] items-start justify-center py-[15px]">
+                <div className="flex flex-row lg:flex-col gap-[20px] items-start justify-center py-[15px]">
 
                   <button className="lg:pl-[28%]">
                     <Image
